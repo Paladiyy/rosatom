@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Roasatom Test Task</title>
+</head>
+<body>
+
+<h1>Write you movie review and find out&nbsp;is it positive&nbsp;or negative?</h1>
+
+<form action="{% url 'prediction' %}" method="post">
+	{% csrf_token %}
+
+	<div> </div>
+
+<div>My review</div>
+<div> </div>
+<div> </div>
+<div><input name="review_text" size="100" type="text"/></div>
+<div> </div>
+<input type="submit" value="submit" />&nbsp;</form>
+
+<div class="output">
+<h2>Review= {{review}}</h2>
+</div>
+<div class="output">
+<h2>Prediction= {{prediction}}</h2>
+</div>
+
+<div class="output">
+<h2>Rating = {{rating}}</h2>
+</div>
+
+</body>
+</html>
